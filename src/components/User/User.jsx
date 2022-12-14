@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
+import {Text, Span} from './User.styled'
 
 export const User = ({ user: { name, email } }) => {
+  const isEndsBiz = email.endsWith('biz')
+  console.log(isEndsBiz)
   return (
     <>
-          <p>Name: {name}</p>
-          <p>Email: {email}</p>
+          <Text>Name: <Span>{name}</Span></Text>
+          <Text>Email: <Span isRed={isEndsBiz}>{email}</Span></Text>
     </>
   );
 };
