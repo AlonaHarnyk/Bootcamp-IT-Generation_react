@@ -9,4 +9,8 @@ ul {
 p {
     margin: 0;
 }
+
+li {
+    margin-bottom: 10px;
+}
 `
